@@ -1,18 +1,20 @@
 # Secrets-App
 
-Aug 2022 
+August 2022 
 
-A simplified Whisper App Clone to practice various levels of authentication.
+*A simplified Whisper App Clone, **Secrets**, users are able to make an account with their email or with their Google account and then view any secrets that have been submitted anonymously by others or submit one themselves.*
 
-Users are able to login with their email of Google account to creat an account to view the secrets submitted and anonymously submit their own.
-
+- Authentication: Google OAuth & Passport.js 
 - Frontend: EJS and Bootstrap
 - Backend: Express with Node.js, MongoDB and Mongoose
+- Deployment: Inactive
 
-This is not currenly deployed. 
+**My personal highlights of this project:**
+Acutally learning and getting the authentication process to work was really eye opening. In this project we worked through the levels of authentication and understanding how hashing, salting, cookies and OAuth. We started at a very basic just saving the email & password, which obviously wasn't secure but we built on the knowledge of database storage and how to take it from plain text to salted & hashed passwords. It was really intersting to see what we all know is important and how keeping those things secure is done. I felt like I was learning the secret of the internet and I was just so amazed as it worked more and more when we added more layers.
 
-This was a really cool learning process. Learning the actual authentication process was really eye opening. We worked through the levels of authentication starting with just basic email & password saving, hashin, salt & hashing, and ending with the passport.js and OAuth. I always knew there was a lot that went into that but working through each step was really cool and made me appreciate it more. 
+**My struggles while building this:**
+Deploying this, I had to take a break as I was trying to figure something things out to get it to work. I asl had some issues with getting the parts that should behind the authentication to be behind them. I was implementing it at first but still anyone could see it which wasn't the person and I needed to review the code thoroughly and slow down.
 
-This was the first time working with and fully understanding process.env."VARIABLES", I had gone down a google whole trying to figure this out more in the newsletter and to-do list and I got partially there but never figured out the .env files fully and it was really satifying to finally understand that more  than just a "I know this is important" type moment. 
 
-The CSS and some of the partial pages are importaed from the bootcamp I am in we were working specifcally on authentication so they provided us with some starter files. 
+**What I learned in the process:**
+.env files usefulness and a bit more understanding of what cookies are. These was a lot missing in my knowledge of just what cookies can do and the informaiton that the hold. So while learning authentication and learning so many new aspects was really motivating jsut proving that there is always more to learn (not that I thought there wasn't but it is nice to see).
