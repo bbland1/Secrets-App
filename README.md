@@ -7,7 +7,7 @@ August 2022
 - Authentication: Google OAuth & Passport.js 
 - Frontend: EJS and Bootstrap
 - Backend: Express with Node.js, MongoDB and Mongoose
-- Deployment: https://pacific-headland-63101.herokuapp.com
+- Deployment: https://pacific-headland-63101.onrender.com
 
 **My personal highlights of this project:**
 Acutally learning and getting the authentication process to work was really eye opening. In this project we worked through the levels of authentication and understanding how hashing, salting, cookies and OAuth. We started at a very basic just saving the email & password, which obviously wasn't secure but we built on the knowledge of database storage and how to take it from plain text to salted & hashed passwords. It was really intersting to see what we all know is important and how keeping those things secure is done. I felt like I was learning the secret of the internet and I was just so amazed as it worked more and more when we added more layers.
