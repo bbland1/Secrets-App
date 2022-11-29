@@ -60,7 +60,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "https://pacific-headland-63101.herokuapp.com/auth/google/secrets",
+  callbackURL: "https://pacific-headland-63101.onrender.com/auth/google/secrets",
   scope: "profile"
 },
   function (accessToken, refreshToken, profile, cb) {
