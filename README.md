@@ -34,9 +34,9 @@ Install all the dependecies of this project by using the [package.json](./packag
 ```shell
 npm install
 ```
-4. Create a `env` file based on the `.env.sample` file and change `SECRET_KEY`, `MONGO_DB`, `CLIENT_ID`, `CLIENT_SECRET` to your specifc strings to connect to your database and access the required authorization process with google.
+5. Create a `env` file based on the `.env.sample` file and change `SECRET_KEY`, `MONGO_DB`, `CLIENT_ID`, `CLIENT_SECRET` to your specifc strings to connect to your database and access the required authorization process with google.
   - Change the  `callbackURL:` within the google strategy for the 2.0 set up to be towards your url
-5. Run the app
+6. Run the app
 ```shell
 node app.js
 ```
