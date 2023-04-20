@@ -2,42 +2,47 @@
 
 ![License](https://img.shields.io/github/license/bbland1/Secrets-App?style=plastic)
 ![Version](https://img.shields.io/github/package-json/v/bbland1/Secrets-App?style=plastic)
-![State](https://img.shields.io/github/deployments/bbland1/Secrets-App/Production?style=plastic)
 ![Language](https://img.shields.io/github/languages/top/bbland1/Secrets-App?style=plastic)
 
-*A simplified Whisper App Clone, **Secrets**, users are able to make an account with their email or with their Google account and then view any secrets that have been submitted anonymously by others or submit one themselves.*
+This is a simplified version of the Whisper App that focused on setting up authorization and authentication. Using methods that are commonly found on sites today to understand how they are implamented and how there is a difference between authorization and authentication.
 
-- Authentication: Google OAuth & Passport.js 
-- Frontend: EJS and Bootstrap
-- Backend: Express with Node.js, MongoDB and Mongoose
-* Deployment: https://pacific-headland-63101.onrender.com
+A user can set up their own account by using their email and setting a password (that will be hashed and salted) for credentials that will be saved in the database. A user can also use their google account to log in if they don't want to create a new set of credentials. When the user is logged in they are able to see the annonymous secrets shared by others, they can also add a secret themselves.
 
+Deployment: https://pacific-headland-63101.onrender.com
 
 ## Requirements
-Install all the dependecies of this project by using the [package.json](./package.json). You will need to run the install command in your terminal after forking and cloning the project.
+Install all the dependecies of this project by using the [package.json](./package.json). For this project to work you will also need a google developers account allowing you to use the Google OAuth process, and to have [installed Mongo DB] on your computer for local development.
 
 ## Built With
 * [dotenv](https://www.npmjs.com/package/dotenv)
-* [EJS](https://ejs.co)
-* [Express.js](https://expressjs.com)
-* [MongoDB](https://www.mongodb.com)
-* [Mongoose](https://mongoosejs.com)
-* [Passport](https://www.passportjs.org)
+* Frontend
+  * [EJS](https://ejs.co)
+  * [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* Backend
+  * [Express.js](https://expressjs.com)
+  * [MongoDB](https://www.mongodb.com)
+  * [Mongoose](https://mongoosejs.com)
+* Authentication & Authorization
+  * [Passport](https://www.passportjs.org)
+  * [GoogleOAuth](https://developers.google.com/identity/protocols/oauth2)
 
 ### Local Development
 1. Download and install the LTS version of [Node.js](https://nodejs.org/en). In this project [nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) was used for the installing of a node version.
-2. Install the project requirements
-3. Create a `env` file
+2. Set up a google developers account.
+3. Download and install mongo db on your computer.
+4. Install the project requirements
 ```shell
 npm install
 ```
+4. Create a `env` file based on the `.env.sample` file and change `SECRET_KEY`, `MONGO_DB`, `CLIENT_ID`, `CLIENT_SECRET` to your specifc strings to connect to your database and access the required authorization process with google.
+  - Change the  `callbackURL:` within the google strategy for the 2.0 set up to be towards your url
+5. Run the app
+```shell
+node app.js
+```
 
-**My personal highlights of this project:**
-Acutally learning and getting the authentication process to work was really eye opening. In this project we worked through the levels of authentication and understanding how hashing, salting, cookies and OAuth. We started at a very basic just saving the email & password, which obviously wasn't secure but we built on the knowledge of database storage and how to take it from plain text to salted & hashed passwords. It was really intersting to see what we all know is important and how keeping those things secure is done. I felt like I was learning the secret of the internet and I was just so amazed as it worked more and more when we added more layers.
+### Deployment
+This project was origially deployed with Heroku. While it still could have been deployed there with the removal of their free teir it was moved to [Render](https://render.com). Typically deployment of an Express app would follow the process listed [here](https://render.com/docs/deploy-node-express-app), but this was a migration following the steps [here](https://render.com/docs/migrate-from-heroku). The migration process was also very straight forward and while you will most likely follow typical deployment just incase there is something you would like to migrate to Render yourself.  
 
-**My struggles while building this:**
-Deploying this, I had to take a break as I was trying to figure something things out to get it to work. I asl had some issues with getting the parts that should behind the authentication to be behind them. I was implementing it at first but still anyone could see it which wasn't the person and I needed to review the code thoroughly and slow down.
-
-
-**What I learned in the process:**
-.env files usefulness and a bit more understanding of what cookies are. These was a lot missing in my knowledge of just what cookies can do and the informaiton that the hold. So while learning authentication and learning so many new aspects was really motivating jsut proving that there is always more to learn (not that I thought there wasn't but it is nice to see).
+### License
+See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
