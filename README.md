@@ -8,7 +8,7 @@ This is a simplified version of the Whisper App that focused on setting up autho
 
 A user can set up their own account by using their email and setting a password (that will be hashed and salted) for credentials that will be saved in the database. A user can also use their google account to log in if they don't want to create a new set of credentials. When the user is logged in they are able to see the annonymous secrets shared by others, they can also add a secret themselves.
 
-Deployment: https://pacific-headland-63101.onrender.com
+Deployment: NO LONGER ACTIVELY DEPLOYED
 
 ## Requirements
 Install all the dependecies of this project by using the [package.json](./package.json). For this project to work you will also need a google developers account allowing you to use the Google OAuth process, and to have [installed Mongo DB] on your computer for local development.
